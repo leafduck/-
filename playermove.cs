@@ -1,19 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+ 
+public class playermove : MonoBehaviour {
+ 
+    float speed = 10f;
+    Rigidbody rigidbody;
+    Vector2 movement;
+    float h, v;
 
-public class UImanager : MonoBehaviour
-{
+    void Start()=>rigidbody = GetComponent<Rigidbody>();
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+    }
+    void FixedUpdate()
+    {
+        movement.Set(h, 0f, v);
+        movement = movement.normalized * speed * Time.deltaTime;
+        rigidbody.MovePosition(transform.position + movement);
     }
 }
