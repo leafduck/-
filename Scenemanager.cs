@@ -10,7 +10,7 @@ public class LoadManager : MonoBehaviour
     public Slider slider; // 여기에 슬라이더 오브젝트 할당
     private AsyncOperation operation;
 
-    private SaveAndLoad theSaveAndLoad;
+    //private SaveAndLoad theSaveAndLoad;코드를 가져온 거라 이건 이 사람이 구현한 클래스타입 변수같다.나는 아직 구현하지 않은 게임저장 클래스여서 일단 락걸어놓음
 
     public static LoadManager instance;
 
@@ -55,8 +55,8 @@ public class LoadManager : MonoBehaviour
             }
         }
 
-        theSaveAndLoad = FindObjectOfType<SaveAndLoad>(); // 다음 씬의 📜SaveAndLoad
-        theSaveAndLoad.LoadData();
+        //theSaveAndLoad = FindObjectOfType<SaveAndLoad>(); // 다음 씬의 📜SaveAndLoad
+        //theSaveAndLoad.LoadData();코드를 가져온 거라서 이건 내가 구현을 안한 코드(대충 saveandload클래스의 loaddata를 실행시키는 코드갇다.)
         gameObject.SetActive(false);
     }
 }
