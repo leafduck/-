@@ -28,5 +28,9 @@ public class characterstate : ScriptableObject {
         //....
     }
     public RT rt;
+    //npc 상태
+    public enum situation{//상태
+        //....
+    }
 
 }
