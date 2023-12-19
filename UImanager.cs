@@ -41,4 +41,5 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
             DontDestroyOnLoad(this.gameObject);
         }    
     }
+    void Write
 }
