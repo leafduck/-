@@ -12,8 +12,8 @@ public class Gamemanager : MonoBehaviour
     전반적으로 게임 시작과 종료를 구현할거다. uimanager에서 정의한 메서드들을 사용할 예정이다.
     씬로드는 따로 구현할 예정이다. 씬로드를 호출한다.
     */ 
-    
-    private static Gamemanager Instance//외부에서 호출할 때 쓰는 프로퍼티
+    private static Gamemanager _instance;
+    public static Gamemanager Instance//외부에서 호출할 때 쓰는 프로퍼티
     {
         get
         {
@@ -40,7 +40,7 @@ public class Gamemanager : MonoBehaviour
     Night
     }
     public Timestate timestate;//낮 시간, 미니게임 시간, 밤 시간을 구분하는 enum형식 객체
-    private static Gamemanager _instance;
+    
     public bool isGameOver=false;//죽으면 게임오버
     [HideInInspector]public int count;//         게임 시작 후 흐르는 시간을 기록
 
