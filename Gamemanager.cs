@@ -74,6 +74,7 @@ public class Gamemanager : MonoBehaviour
                  {
                      timestate = Timestate.Mimigame;
                      count = 0;
+                     //+미니게임으로 씬전환하는 함수 호출
                  }
                  break;
              case Timestate.Minigame:
@@ -81,6 +82,7 @@ public class Gamemanager : MonoBehaviour
                  {
                      timestate = Timestate.Night;
                      count = 0;
+                     //+미니게임에서 일반 맵으로 씬전환하고, 개인실에서 깨어남
                  }
                  break;
              case Timestate.Night:
@@ -88,6 +90,7 @@ public class Gamemanager : MonoBehaviour
                  {
                      timestate = Timestate.Day;
                      count = 0;
+                     //+밤이 지나고 아침이 되면 실행할 함수 호출(예) 하루마다 지급해야하는 아이템을 지급하는 함수 등)
                  }
                  break;                 
          }
@@ -97,7 +100,8 @@ public class Gamemanager : MonoBehaviour
     public void Gamestart(){//게임을 새로 시작하고 싶을 때 호출
         count=0;
         isGameOver=false;
-        timestate=Timestate.Day;            
+        timestate=Timestate.Day;
+        //+플레이어 상태 초기화 등
     }
     
 }
