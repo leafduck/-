@@ -12,19 +12,7 @@ public class Gamemanager : MonoBehaviour
     전반적으로 게임 시작과 종료를 구현할거다. uimanager에서 정의한 메서드들을 사용할 예정이다.
     씬로드는 따로 구현할 예정이다. 씬로드를 호출한다.
     */ 
-    enum Timestate{
     
-    }
-    private static Gamemanager _instance;
-    public bool isGameOver=false;//죽으면 게임오버
-    private int count;//시간의 흐름을 저장
-    {
-        set
-        {
-            if(count==)
-        }
-    
-    }
     public static Gamemanager Instance//외부에서 호출할 때 쓰는 프로퍼티
     {
         get
@@ -46,6 +34,16 @@ public class Gamemanager : MonoBehaviour
             return _instance;
         }
     }
+    public enum Timestate{
+    Day,
+    Minigame,
+    Night
+    }
+    public Timestate timestate;//낮 시간, 미니게임 시간, 밤 시간을 구분하는 enum형식 객체
+    private static Gamemanager _instance;
+    public bool isGameOver=false;//죽으면 게임오버
+    [HideInInspector]public int count;//         게임 시작 후 흐르는 시간을 기록
+
     private void Awake() {
         if (_instance != null && _instance != this)
         {
@@ -60,11 +58,46 @@ public class Gamemanager : MonoBehaviour
     }
     
     private void Start() {
-            
+        Gamestart();
     }
+
     private void Update() {
+         if(isGameOver==true){
+             return;
+         }
+            
          count++;
+         switch (timestate)
+         {   
+             case Timestate.Day:
+                 if (count >= 300)
+                 {
+                     timestate = Timestate.Mimigame;
+                     count = 0;
+                 }
+                 break;
+             case Timestate.Minigame:
+                 if (count >= 60)
+                 {
+                     timestate = Timestate.Night;
+                     count = 0;
+                 }
+                 break;
+             case Timestate.Night:
+                 if (count >= 120)
+                 {
+                     timestate = Timestate.Day;
+                     count = 0;
+                 }
+                 break;                 
+         }
         
+    }
+    
+    public void Gamestart(){//게임을 새로 시작하고 싶을 때 호출
+        count=0;
+        isGameOver=false;
+        timestate==Timestate.Day;            
     }
     
 }
