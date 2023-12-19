@@ -12,10 +12,12 @@ public class Gamemanager : MonoBehaviour
     전반적으로 게임 시작과 종료를 구현할거다. uimanager에서 정의한 메서드들을 사용할 예정이다.
     씬로드는 따로 구현할 예정이다. 씬로드를 호출한다.
     */ 
-    public 
+    enum Timestate{
+    
+    }
     private static Gamemanager _instance;
     public bool isGameOver=false;//죽으면 게임오버
-    private int count;
+    private int count;//시간의 흐름을 저장
     {
         set
         {
