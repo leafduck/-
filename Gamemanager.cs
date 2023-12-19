@@ -59,6 +59,7 @@ public class Gamemanager : MonoBehaviour
     
     private void Start() {
         Gamestart();
+        
     }
 
     private void Update() {
