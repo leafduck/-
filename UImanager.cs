@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class UImanager : MonoBehaviour
 {
-    void start{
+    void start(){
     
     }
-    void Update{
+    void Update(){
     
     }
 
