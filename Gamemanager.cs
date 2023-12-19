@@ -68,7 +68,7 @@ public class Gamemanager : MonoBehaviour
          }
             
          count++;
-         count*=time.deltatime;
+         count+=time.deltatime;
          switch (timestate)
          {   
              case Timestate.Day:
