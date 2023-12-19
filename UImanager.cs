@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고, 싱글턴패턴으로 구한한 함수를 외부에서 가져다쓸거임
 {    
     public static UImanager _instance;
-    public text noattion ;//화면 중앙에 띄울 작은 알림
+    public Text Notification ;//화면 중앙에 띄울 작은 알림
      // 외부에서 싱글톤에 접근할 때 사용할 프로퍼티
     public static UImanager Instance
     {
@@ -41,12 +41,4 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
             DontDestroyOnLoad(this.gameObject);
         }    
     }
-    
-    
-
-
-
-
-
-
 }
