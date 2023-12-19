@@ -67,7 +67,7 @@ public class Gamemanager : MonoBehaviour
              return;
          }
             
-         count++;
+         
          count+=time.deltatime;
          switch (timestate)
          {   
