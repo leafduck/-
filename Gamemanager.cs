@@ -13,7 +13,7 @@ public class Gamemanager : MonoBehaviour
     씬로드는 따로 구현할 예정이다. 씬로드를 호출한다.
     */ 
     
-    public static Gamemanager Instance//외부에서 호출할 때 쓰는 프로퍼티
+    private static Gamemanager Instance//외부에서 호출할 때 쓰는 프로퍼티
     {
         get
         {
