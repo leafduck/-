@@ -7,7 +7,7 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
     public static UImanager _instance;
     public text noattion ;//화면 중앙에 띄울 작은 알림
      // 외부에서 싱글톤에 접근할 때 사용할 프로퍼티
-    public static MySingleton Instance
+    public static UImanager Instance
     {
         get
         {
@@ -15,13 +15,13 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
             if (_instance == null)
             {
                 // 씬에서 싱글톤 오브젝트를 찾아봅니다.
-                _instance = FindObjectOfType<MySingleton>();
+                _instance = FindObjectOfType<UImanager>();
 
                 // 씬에 없으면 새로 생성
                 if (_instance == null)
                 {
-                    GameObject singletonObject = new GameObject("MySingleton");
-                    _instance = singletonObject.AddComponent<MySingleton>();
+                    GameObject singletonObject = new GameObject("UImanager");
+                    _instance = singletonObject.AddComponent<UImanager>();
                 }
             }
 
