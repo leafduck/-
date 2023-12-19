@@ -27,7 +27,7 @@ public class Gamemanager : MonoBehaviour
                 if (_instance == null)
                 {
                     GameObject singletonObject = new GameObject("Gamemanager");
-                    _instance = singletonObject.AddComponent<MySingleton>();
+                    _instance = singletonObject.AddComponent<Gamemanager>();
                 }
             }
 
@@ -97,7 +97,7 @@ public class Gamemanager : MonoBehaviour
     public void Gamestart(){//게임을 새로 시작하고 싶을 때 호출
         count=0;
         isGameOver=false;
-        timestate==Timestate.Day;            
+        timestate=Timestate.Day;            
     }
     
 }
