@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjData : MonoBehaviour{
+public class SOObjData : ScriptableObject{
    public int id;
    public bool isnpc;
 }
