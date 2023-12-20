@@ -110,7 +110,7 @@ public class Gamemanager : MonoBehaviour
     public void GameOver(){
         isGameOver=true;
         credit=0;
-        UImanager.instance.WriteNotification("게임 오버")
+        UImanager.Instance.WriteNotification("게임 오버")
     }
     
 }
