@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Emotion:ScriptableObject{
+public class SOEmotion:ScriptableObject{
   
 
 
