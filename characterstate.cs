@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "characterstate", menuName = "test/characterlist", order = 0)]
+[CreateAssetMenu(fileName = "SOcharacterstate", menuName = "test/characterlist", order = 0)]
 public class SOcharacterstate : ScriptableObject {
     [field: SerializeField]
     public int reliability;//신뢰도
