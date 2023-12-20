@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SOObjData : ScriptableObject{
+public class SOobjData : ScriptableObject{
    public int id;
    public bool isnpc;
 }
