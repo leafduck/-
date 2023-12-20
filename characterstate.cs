@@ -32,7 +32,7 @@ public class characterstate : ScriptableObject {
     }
     public Personailty personailty;
     public enum Tendency{//성향(게임 시작부터 끝까지 영향을 미치는 요소)
-        Selfinish, //개인주의
+        Selfish, //개인주의
         Strange, //괴짜
         Cooperately, //협동적
         Newtral, //중립
