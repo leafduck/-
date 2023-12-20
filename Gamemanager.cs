@@ -21,7 +21,7 @@ public class Gamemanager : MonoBehaviour
             if (_instance == null)
             {
                 // 씬에서 싱글톤 오브젝트를 찾아봅니다.
-                _instance = FindObjectOfType<MySingleton>();
+                _instance = FindObjectOfType<Gamemanager>();
 
                 // 씬에 없으면 새로 생성
                 if (_instance == null)
