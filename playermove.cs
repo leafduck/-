@@ -5,18 +5,18 @@ public class playermove : MonoBehaviour {
     float speed = 10f;
     Rigidbody rigidbody;
     Vector2 movement;
-    float h, v;
+    float horizontal, vertical;
 
     void Start()=>rigidbody = GetComponent<Rigidbody>();
     
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
     }
     void FixedUpdate()
     {
-        movement.Set(h, 0f, v);
+        movement.Set(horizontal, 0f, vertical);
         movement = movement.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(transform.position + movement);
     }
