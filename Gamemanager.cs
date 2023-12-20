@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Gamemanager : MonoBehaviour
 {
-    
+    //다음주 화요일까지(2023-12-26) 동아리 세특ppt 보내기 rgs123@hanmail.net
     /*게임 매니저가 갖추어야 할 것
     1.싱글톤 패턴으로 메서드 공유
     2.게임오버 상태를 표현하고, 게임 점수와 ui관리
@@ -40,6 +40,8 @@ public class Gamemanager : MonoBehaviour
     Night
     }
     public Timestate timestate;//낮 시간, 미니게임 시간, 밤 시간을 구분하는 enum형식 객체
+
+    public int credit;//게임 내 재화
     
     public bool isGameOver=false;//죽으면 게임오버
     [HideInInspector]public int count;//         게임 시작 후 흐르는 시간을 기록
@@ -104,6 +106,10 @@ public class Gamemanager : MonoBehaviour
         isGameOver=false;
         timestate=Timestate.Day;
         //+플레이어 상태 초기화 등
+    }
+    public void GameOver(){
+        isGameOver=true;
+        credit=0;
     }
     
 }
