@@ -44,7 +44,7 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
     public void WriteNotification(string notice){
         NotificationText=notice;
         startcoroutine(delay(4f));
-        NotificationText="";
+        NotificationText=" ";
     }
     IEnumerater delay(float delay){
         yield return new waitforsecond(delay);
