@@ -41,9 +41,12 @@ public class UImanager : MonoBehaviour// 여기에서는 함수구현만 하고,
             DontDestroyOnLoad(this.gameObject);
         }    
     }
-    IEnumerater WriteNotification(string notice){
+    public void WriteNotification(string notice){
         NotificationText=notice;
-        yield return new waitforsecond(2f);
+        startcoroutine(delay(4f));
         NotificationText="";
+    }
+    IEnumerater delay(float delay){
+        yield return new waitforsecond(delay);
     }
 }
