@@ -1,3 +1,3 @@
-public interface IItem{          //느슨한 커플링을 활용할 인터페이스_사용 아이템이 상속할 인터페이스이다.
+public interface IItem{//느슨한 커플링을 활용할 인터페이스_사용 아이템이 상속할 인터페이스이다.
     void Use();
 }
